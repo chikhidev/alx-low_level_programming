@@ -1,22 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-int main(void)
+if (n==0)
 {
-	int n = rand() % 100;
-	char res[100] ;
-	if (n==0)
-	{
-		strcat(res, "is zero");
-	}
-	else if (n>0)
-	{
-		strcat(res, "is positive");
-	}
-	else 
-	{
-		strcat(res, "is negative");
-	}
-	printf("%d %s\n",n,res);
-	return 0;
+	printf("%d is zero\n",n);
+}else if (n>0)
+{
+	printf("%d is positive\n",n);
+}else
+{
+	printf("%d is negative\n",n);
 }
