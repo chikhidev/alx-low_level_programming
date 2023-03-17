@@ -3,7 +3,7 @@
 #include <string.h>
 int main(void)
 {
-	int n = rand();
+	int n = rand() % 100;
 	char res[100] ;
 	if (n==0)
 	{
