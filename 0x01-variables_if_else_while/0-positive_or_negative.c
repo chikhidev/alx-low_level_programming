@@ -4,7 +4,7 @@
 /**
 * main: main
 *
-* return: success
+* return: 0 success
 */
 
 int main(void)
