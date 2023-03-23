@@ -14,4 +14,3 @@ int int_isupper(int c)
 	}
 	return 0
 }
-
