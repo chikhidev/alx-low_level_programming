@@ -7,3 +7,4 @@ int int_isupper(int c)
 	else
 		return 0
 }
+
