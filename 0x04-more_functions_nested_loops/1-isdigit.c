@@ -5,6 +5,9 @@
 * _isdigit - checkes if c is digit
 * @c: variable param
 * Return: 1 if true 0 if false
+*
+* Description: Uses headers to link and a nested loops to achieve goal
+* Return: see first line
 */
 
 int _isdigit(int c)
