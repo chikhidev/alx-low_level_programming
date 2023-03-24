@@ -8,20 +8,23 @@
 
 int main(void)
 {
-	unsigned long i = 2;
-	unsigned long biggest = 0;
-	unsigned long number = 612852475143;
+	long number = 612852475143;
+	int inc;
 
-	while (number > i)
+	while (inc++ < number /2)
 	{
-		while (number % i == 0)
-		{
-			if (i > biggest)
-				biggest = i;
-			number = number / i;
-		}
-		i++;
+			if (number % inc == 0)
+			{
+				number /= 2;
+				continue;
+			}
+
+			for (inc = 3; inc < number / 2; inc += 2)
+			{
+				if (number % inc == 0)
+					number /= inc;
+			}
 	}
-	printf("%ld\n", biggest);
+	printf("%ld\n", number);
 	return (0);
 }
