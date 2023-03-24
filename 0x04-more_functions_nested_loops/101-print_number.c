@@ -4,6 +4,8 @@
 /**
 * print_number - outputs a number
 * @n: an int given from main
+*
+* Description: Uses headers to link and a nested loops to achieve goal
 * Return: nothing void 
 */
 
