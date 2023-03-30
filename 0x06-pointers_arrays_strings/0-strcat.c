@@ -1,3 +1,4 @@
+#include "main.h"
 
 /**
 * _srtcat - char function returns concat of two strings
