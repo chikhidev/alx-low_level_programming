@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
-* _srtcat - char function returns concat of two strings
-* @dest: first array of chars param
-* @src: second param
-*
-* Return: char (dest)
-*/
+ * *_strcat - appends the src string to the dest string
+ *
+ * @dest: char to check
+ * @src: char to check
+ * Description: This will append the src string to the dest string
+ * Return: a pointer to the resulting string dest
+ */
 
 char *_strcat(char *dest, char *src)
 {
