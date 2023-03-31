@@ -8,7 +8,7 @@
 void reverse_array(int *a, int n)
 {
         int i = 0, j = 0;
-        int array[n];
+        int *temp_array = malloc(n * sizeof(int));
 
         while (i < n)
         {
