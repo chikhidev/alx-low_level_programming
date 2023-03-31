@@ -2,6 +2,16 @@
 #include <stdio.h>
 
 /**
+ * isPrintableASCII - determines if n is a printable ASCII char
+ * @n: integer
+ * Return: 1 if true, 0 if false
+ */
+int isPrintableASCII(int n)
+{
+	return (n >= 32 && n <= 126);
+}
+
+/**
  * printHexes - print hex values for string b in formatted form
  * @b: string to print
  * @start: starting position
@@ -37,7 +47,7 @@ void printASCII(char *b, int start, int end)
 	while (i < end)
 	{
 		ch = *(b + i + start);
-		if (! (n >= 32 && n <= 126))
+		if (! (ch >= 32 && ch <= 126))
 			ch = 46;
 		printf("%c", ch);
 		i++;
