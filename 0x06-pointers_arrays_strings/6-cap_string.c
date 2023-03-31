@@ -7,28 +7,28 @@
  *
  * Return: pointer to the resulting string
  */
-char *cap_string(char *str)
+char *cap_string(char *a)
 {
 int i = 0;
 
-while (str[i] != '\0')
+while (a[i] != '\0')
 {
 if (i == 0)
 {
-if (str[i] >= 'a' && str[i] <= 'z')
+if (a[i] >= 'a' && a[i] <= 'z')
 {
-str[i] = str[i] - 32;
+a[i] = a[i] - 32;
 }
 }
-if (str[i] == ' ' || str[i] == '\n' || str[i] == ',' || str[i] == '\t' || str[i] == ';' || str[i] == '.' || str[i] == '!' || str[i] == '?' || str[i] == '"' || str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}')
+if (a[i] == ' ' || a[i] == '\n' || a[i] == ',' || a[i] == '\t' || a[i] == ';' || a[i] == '.' || a[i] == '!' || a[i] == '?' || a[i] == '"' || a[i] == '(' || a[i] == ')' || a[i] == '{' || a[i] == '}')
 {
-if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
+if (a[i + 1] >= 'a' && a[i + 1] <= 'z')
 {
-str[i + 1] = str[i + 1] - 32;
+a[i + 1] = a[i + 1] - 32;
 }
 }
 }
 i++;
-return (str);
+return (a);
 }
 
