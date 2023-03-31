@@ -11,17 +11,11 @@ char *leet(char *c)
 	char a[] = "aeotlAEOTL";
 	char b[] = {'4', '3', '0', '7', '1',
 		    '4', '3', '0', '7', '1'};
-	int i = 0, j = 0;
+	int x, y;
 
-	while (c[i] != '\0')
-  {
-		while (a[j] != '\0')
-    {
-			if (c[i] == a[j])
-				c[i] = b[j];
-      j++;
-    }
-    i++;
-  }
+	for (x = 0; c[x] != '\0'; x++)
+		for (y = 0; a[y] != '\0'; y++)
+			if (c[x] == a[y])
+				c[x] = b[y];
 	return (c);
 }
