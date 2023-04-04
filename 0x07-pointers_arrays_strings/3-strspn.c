@@ -1,21 +1,12 @@
 #include "main.h"
 
 /**
-<<<<<<< HEAD
 * _strspn - Locates a character in a string
 * @s: This is the main C string to be scanned.
 * @accept: This is the string containing the list of characters to match in s
 * Return: return count
 **/
-=======
-* _strspn - function that gets the length of a prefix substring
-*
-* @accept: pointer to get the bytes
-* @s: pointer to string char type
-*
-* Return: the number of bytes in the initial segment of s which consist only of bytes from accept
-*/
->>>>>>> 999558edc3dffe9e0329032b053ce944da64ec77
+
 
 unsigned int _strspn(char *s, char *accept)
 
