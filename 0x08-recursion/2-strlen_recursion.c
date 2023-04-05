@@ -6,7 +6,6 @@
  * @s: string given
  * Return: 1 on sucess
  */
-
 int _strlen_recursion(char *s)
 {
 if (*s)

@@ -7,16 +7,15 @@
  * Return: factorial if not n is not 0 and 1 otherwise gives 1 if negative gives -1
  */
 
-
 int factorial(int n)
 {
-if (n != 0)
-{
-return n * factorial(n - 1);
-}
-else if(n == 0)
+if (n == 0)
 {
 return 1;
+}
+else if (n > 0)
+{
+return n * factorial(n - 1);
 }
 else
 {
