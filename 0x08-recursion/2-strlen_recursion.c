@@ -3,9 +3,8 @@
 /**
  * _strlen_recursion - function that returns the length of a string.
  *
- * Discrition: while not end of string count
  * @s: string given
- * Returns: integer of strig length
+ * Returns: integer of strig length 0 if in end and counting if else
  */
 
 int _strlen_recursion(char *s)
