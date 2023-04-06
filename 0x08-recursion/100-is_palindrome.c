@@ -10,9 +10,9 @@
 
 int length(char *c, int len)
 {
-	if (*c == 0)
-		return (len - 1);
-	return (length(c + 1, len + 1));
+if (*c == 0)
+return (len - 1);
+return (length(c + 1, len + 1));
 }
 
 /**
@@ -25,11 +25,11 @@ int length(char *c, int len)
 
 int compare(char *c, int len)
 {
-	if (*c != c[len])
-		return (0);
-	else if (*c == 0)
-		return (1);
-	return (compare(c + 1, len - 2));
+if (*c != c[len])
+return (0);
+else if (*c == 0)
+return (1);
+return (compare(c + 1, len - 2));
 }
 
 /**
@@ -41,7 +41,7 @@ int compare(char *c, int len)
 
 int is_palindrome(char *s)
 {
-	int len;
-	len = length(s, 0);
-	return (compare(s, len));
+int len;
+len = length(s, 0);
+return (compare(s, len));
 }
