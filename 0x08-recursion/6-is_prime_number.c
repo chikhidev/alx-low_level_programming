@@ -8,19 +8,14 @@
  * Return: 1 on success
  */
 
-int is_prime(int n, int counter) {
+int is_prime(int n, int counter)
+{
 if (n == counter)
-{
 return (1);
-}
 else if (n % counter == 0)
-{
 return (0);
-}
 else
-{
 return (is_prime(n, counter + 1));
-}
 }
 
 /**
@@ -30,13 +25,10 @@ return (is_prime(n, counter + 1));
  * Return: 1 on sucess
  */
 
-int is_prime_number(int n) {
+int is_prime_number(int n)
+{
 if (n <= 1)
-{
 return (0);
-}
 else
-{
-return is_prime(n, 2);
-}
+return (is_prime(n, 2));
 }
