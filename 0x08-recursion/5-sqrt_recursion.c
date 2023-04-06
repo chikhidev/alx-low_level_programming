@@ -30,6 +30,6 @@ return (equelizer(n, x + 1));
 
 int _sqrt_recursion(int n)
 {
-return equelizer(n, 1);
+return (equelizer(n, 1));
 }
 
