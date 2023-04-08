@@ -9,12 +9,11 @@
 
 int main(int argc, char *argv[])
 {	
-	int i = 0;
 	(void) argc;
-	while(argv[i])
+	while(*argv)
 	{
-		printf("%s\n", argv[i]);
-		i++;
+		printf("%s\n", *argv);
+		argv++;
 	}
 	return (0);
 }
