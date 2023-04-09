@@ -27,20 +27,22 @@ int isValid(char s[])
 
 int main(int argc, char *argv[])
 {
-	int res;
+	int res = 0;
 	(void)argc;
-	if (argv[1] && argv[2])
+	argv++;
+	while (*argv)
 	{
-		if (isValid(argv[2]) && isValid(argv[2]))
+		if (isValid(*argv))
 		{
-			res = strtol(argv[1], NULL, 10) + strtol(argv[2], NULL, 10);
-			printf("%d\n", res);
+			res += strtol(*argv, NULL, 10);
 		}
 		else
 		{
 			printf("Error\n");
 			return (1);
 		}
+		argv++;
 	}
+	printf("%d\n", res);
 	return (0);
 }
