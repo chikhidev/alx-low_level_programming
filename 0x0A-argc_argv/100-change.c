@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int coins[4] = {25, 10, 5, 2, 1};
+	int coins[5] = {25, 10, 5, 2, 1};
 	int amount, counter = 0, i = 0;
 	(void)argc;
 
