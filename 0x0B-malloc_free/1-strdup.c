@@ -12,14 +12,15 @@ char *_strdup(char *str)
 {
 	int i = 0, j = 0;
 	char *temp;
-	
+
 	if (str)
 	{
 		while (*(str + i))
 		{
 			i++;
 		}
-		temp = malloc(i * sizeof(char));
+		temp = malloc(i * sizeof(char) + 1);
+
 		if (temp)
 		{
 			while (j < i)
@@ -27,7 +28,7 @@ char *_strdup(char *str)
 				*(temp + j) = *(str + j);
 				j++;
 			}
-	
+
 			return (temp);
 		}
 	}
