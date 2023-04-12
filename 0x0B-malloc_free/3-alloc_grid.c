@@ -13,46 +13,46 @@
 
 int **alloc_grid(int width, int height)
 {
-    int **grid;
-    int row, col;
+int **grid;
+int row, col;
 
-    if (width < 1 || height < 1)
-        return NULL;
+if (width < 1 || height < 1)
+return NULL;
 
-    grid = malloc(sizeof(int *) * height);
-    if (grid == NULL)
-        return NULL;
+grid = malloc(sizeof(int *) * height);
+if (grid == NULL)
+return (NULL);
 
-    row = 0;
-    while (row < height)
-    {
-        grid[row] = malloc(sizeof(int) * width);
-        if (grid[row] == NULL)
-        {
-            col = row - 1;
-            while (col >= 0)
-            {
-                free(grid[col]);
-                col--;
-            }
-            free(grid);
-            return NULL;
-        }
-        row++;
-    }
+row = 0;
+while (row < height)
+{
+grid[row] = malloc(sizeof(int) * width);
+if (grid[row] == NULL)
+{
+col = row - 1;
+while (col >= 0)
+{
+free(grid[col]);
+col--;
+}
+free(grid);
+return (NULL);
+}
+row++;
+}
 
-    row = 0;
-    while (row < height)
-    {
-        col = 0;
-        while (col < width)
-        {
-            grid[row][col] = 0;
-            col++;
-        }
-        row++;
-    }
+row = 0;
+while (row < height)
+{
+col = 0;
+while (col < width)
+{
+grid[row][col] = 0;
+col++;
+}
+row++;
+}
 
-    return grid;
+return (grid);
 }
 
