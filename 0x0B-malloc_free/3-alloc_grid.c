@@ -16,36 +16,23 @@ int **alloc_grid(int width, int height)
 int **grid, row = 0, col;
 
 if (width < 1 || height < 1)
-return NULL;
+return (NULL);
 grid = malloc(sizeof(int *) * height);
 if (grid == NULL)
 return (NULL);
-while (row < height)
-{
-grid[row] = malloc(sizeof(int) * width);
-if (grid[row] == NULL)
-{
-col = row - 1;
-while (col >= 0)
-{
-free(grid[col]);
-col--;
-}
-free(grid);
-return (NULL);
-}
-row++;
-}
-row = 0;
-while (row < height)
+while (row < height && (grid[row] = malloc(sizeof(int) * width)))
 {
 col = 0;
 while (col < width)
-{
-grid[row][col] = 0;
-col++;
-}
+grid[row][col++] = 0;
 row++;
+}
+if (row < height)
+{
+while (row--)
+free(grid[row]);
+free(grid);
+return (NULL);
 }
 return (grid);
 }
