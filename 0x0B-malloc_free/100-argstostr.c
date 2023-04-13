@@ -33,7 +33,7 @@ return (count);
  */
 char **strtow(char *str)
 {
-int i, j, len, wordsize, count;
+int i, j, len, wordsize;
 char **p;
 
 if (str == NULL || *str == '\0')
