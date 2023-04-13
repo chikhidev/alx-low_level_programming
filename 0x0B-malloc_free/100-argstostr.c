@@ -2,70 +2,53 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/**
- * count_words - counts the number of words in a string
- * @str: pointer to string
- * Return: number of words in the string
+//**
+ * argstostr - concatenates all the arguments of a program.
+ * @ac: argument count.
+ * @av: argument vector.
+ *
+ * Return: pointer of an array of char
  */
-int count_words(char *str)
+char *argstostr(int ac, char **av)
 {
-int i = 0, count = 0, len = 0;
+char *out;
+int count = 0, i = 0, j = 0, index = 0;
 
-while (*(str + len))
-len++;
-
-while (i < len)
+if (ac == 0 || av == NULL)
+return (NULL);
+while (av[i] != NULL)
 {
-while (*(str + i) == ' ' && i < len)
-i++;
-if (i == len)
-break;
+j = 0;
+while (av[i][j] != '\0')
+{
 count++;
-while (*(str + i) != ' ' && i < len)
-i++;
-}
-return (count);
-}
-/**
- * strtow - splits a string into words
- * @str: pointer to string
- * Return: double pointer to array of pointers
- */
-char **strtow(char *str)
-{
-int i, j, len, wordsize;
-char **p;
-
-if (str == NULL || *str == '\0')
-return (NULL);
-
-len = count_words(str);
-p = malloc((len + 1) * sizeof(char *));
-if (p == NULL)
-return (NULL);
-
-i = j = 0;
-while (i < len)
-{
-while (str[j] == ' ')
 j++;
-wordsize = 0;
-while (str[j + wordsize] != ' ' && str[j + wordsize] != '\0')
-wordsize++;
-p[i] = malloc((wordsize + 1) * sizeof(char));
-if (p[i] == NULL)
-{
-for (j = 0; j < i; j++)
-free(p[j]);
-free(p);
-return (NULL);
 }
-for (wordsize = 0; str[j] != ' ' && str[j] != '\0'; j++, wordsize++)
-p[i][wordsize] = str[j];
-p[i][wordsize] = '\0';
+count++;
 i++;
 }
-p[i] = NULL;
-return (p);
-}
+out = malloc((count + 1) * sizeof(char));
 
+if (out == NULL)
+return (NULL);
+
+i = j = index = 0;
+while (index < count)
+{
+if (av[i][j] == '\0')
+{
+out[index] = '\n';
+i++;
+index++;
+j = 0;
+}
+if (index < count - 1)
+out[index] = av[i][j];
+
+j++;
+index++;
+}
+out[index] = '\0';
+
+return (out);
+}
