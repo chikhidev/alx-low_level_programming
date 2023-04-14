@@ -16,7 +16,10 @@ unsigned int i = 0;
 char *new_ptr, *temp_ptr;
 
 if (!ptr)
+{
+free(ptr);
 return (malloc(new_size));
+}
 if (new_size == 0)
 {
 free(ptr);
