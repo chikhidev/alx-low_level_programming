@@ -27,7 +27,7 @@ return (ptr);
 
 temp_ptr = (char *)ptr;
 
-new_ptr = malloc(sizeof(int) * new_size + 1);
+new_ptr = malloc(sizeof(int) * new_size);
 if (new_ptr == NULL)
 return (NULL);
 
