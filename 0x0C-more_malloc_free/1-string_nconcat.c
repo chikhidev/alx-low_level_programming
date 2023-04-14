@@ -45,10 +45,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (i < s1_len)
 			string[i] = s1[i];
 		else
+		{
 			if ((i - s1_len) <= n)
 				string[i] = s2[i - s1_len];
 			else
 				break;
+		}
 		i++;
 	}
 	string[i] = '\0';
