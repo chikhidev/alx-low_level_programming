@@ -11,13 +11,20 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	unsigned int counter = 0;
 	void *p;
 
 	if ((nmemb || size) == 0)
 		return (NULL);
-	p = calloc(nmemb, size);
-	if (p == NULL)
+	p = malloc(nmemb * size);
+	if (!p)
 		return (NULL);
+	while (counter < nmemb)
+	{
+		*p[counter] = 0;
+		counter++;
+	}
+
 	return (p);
 }
 
