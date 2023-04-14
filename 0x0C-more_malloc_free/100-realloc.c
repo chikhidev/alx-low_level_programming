@@ -33,7 +33,7 @@ return (NULL);
 
 while (i < old_size)
 {
-new_ptr[i] = *(temp_ptr + i);
+*(new_ptr + i) = *(temp_ptr + i);
 i++;
 }
 free(ptr);
