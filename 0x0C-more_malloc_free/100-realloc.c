@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/** _realloc - function like realloc
+/**
+ * _realloc - function like realloc
  * @ptr: old pointer
  * @old_size: old pointer size
  * @new_size: new pointer size
@@ -15,7 +16,7 @@ unsigned int i = 0;
 char *new_ptr, *temp_ptr;
 
 if (!ptr)
-return malloc(new_size);
+return (malloc(new_size));
 if (new_size == 0)
 {
 free(ptr);
