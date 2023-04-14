@@ -6,13 +6,13 @@
  * @b: bytes to reserve
  * Return:char
  */
-
 void *malloc_checked(unsigned int b)
 {
-	int *temp;
+	void *temp;
 
 	temp = malloc(b);
 	if (!temp)
 		exit(98);
 	return (temp);
+
 }
