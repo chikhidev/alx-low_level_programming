@@ -22,6 +22,8 @@ if (new_size == 0)
 free(ptr);
 return (NULL);
 }
+if (old_size == new_size)
+return (ptr);
 
 temp_ptr = (char *)ptr;
 
