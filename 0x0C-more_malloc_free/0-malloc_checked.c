@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * malloc_checked - function that allocates memory using malloc.
@@ -6,7 +7,7 @@
  * Return:char
  */
 
-void *malloc_checked(size_t b)
+void *malloc_checked(unsigned int b)
 {
 void *p = malloc(b);
 
