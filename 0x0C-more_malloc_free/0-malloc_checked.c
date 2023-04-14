@@ -7,13 +7,13 @@
  * @b: bytes to reserve
  * Return:char
  */
-void *malloc_checked(unsigned int b)
+void *malloc_checked(size_t b)
 {
-	void *temp;
+void *p = malloc(b);
 
-	temp = malloc(b);
-	if (!temp)
-		exit(98);
-	return (temp);
-
+if (p == NULL)
+{
+exit(98);
+}
+return (p);
 }
