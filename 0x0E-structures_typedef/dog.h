@@ -2,6 +2,7 @@
 #define _DOG_H
 
 /**
+ * struct dog - dog
  * struct type_dog - fog type
  * @name: dog name
  * @age: dog edge
