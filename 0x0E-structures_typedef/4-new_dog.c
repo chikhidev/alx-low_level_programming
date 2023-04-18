@@ -7,14 +7,14 @@
  * @name: name
  * @owner: pwner
  * @age: age
- * Return: the dog 
+ * Return: the dog
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 int nameCount = 0, ownerCount = 0;
 dog_t *new_dog = malloc(sizeof(dog_t));
-  
+
 if (new_dog == NULL)
 return (new_dog);
 
