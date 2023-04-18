@@ -7,19 +7,19 @@
  * @age: dog edge
  * @owner: owner
  */
-typedef struct type_dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
 }
 	dog;
-typedef struct type_dog dog;
+typedef struct dog type_dog;
 
 int _putchar(char c);
-void init_dog(struct type_dog *d, char *name, float age, char *owner);
-void print_dog(struct type_dog *d);
-dog *new_dog(char *name, float age, char *owner);
-void free_dog(type_dog *d);
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+type_dog *new_dog(char *name, float age, char *owner);
+void free_dog(dog *d);
 
 #endif
