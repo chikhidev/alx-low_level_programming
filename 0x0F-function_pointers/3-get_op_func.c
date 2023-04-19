@@ -1,7 +1,7 @@
 #include "3-calc.h"
 
 /**
- * get_op_func - Returns a pointer to a function based on the operator passed as an argument
+ * get_op_func - Returns a pointer to a function
  *
  * @s: The operator passed as an argument to the program
  *
