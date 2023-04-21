@@ -1,4 +1,3 @@
-
 # ALX Low-Level Programming
 
 This repository contains my solutions to ALX's low-level programming assignments.
