@@ -22,7 +22,8 @@ s = (char *) separator;
 
 va_start(vlist, n);
 
-if (n > 0) {
+if (n > 0)
+{
 printf("%s", va_arg(vlist, char *));
 i++;
 while (i < n)
