@@ -25,6 +25,6 @@ i++;
 }
 
 printf("\n");
-va_end(valist);
+va_end(vlist);
 }
 
