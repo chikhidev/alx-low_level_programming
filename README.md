@@ -31,7 +31,6 @@ This repository contains C programs that demonstrate my understanding of low-lev
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-
 ## Acknowledgments
 
 * [ALX](https://www.alxafrica.com/) - for providing the low-level programming assignments.
