@@ -21,7 +21,8 @@ char *str;
 
 va_start(vlist, format);
 
-while (format && format[i]) i++;
+while (format && format[i])
+i++;
 
 while (n < i && format && format[n])
 {
