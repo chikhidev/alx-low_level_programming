@@ -14,7 +14,7 @@ va_list valist;
 unsigned int i = 0, sum = 0;
 
 if (n == 0)
-return 0;
+return (0);
 
 va_start(valist, n);
 
@@ -26,6 +26,6 @@ i++;
 
 va_end(valist);
 
-return sum;
+return (sum);
 }
 
