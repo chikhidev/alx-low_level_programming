@@ -2,6 +2,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+* cases_handle - cases handler
+* @idx: index
+* @new_node: pointer new node
+* @temp: temp pointer
+* Return: adress
+*/
+
 listint_t *cases_handle(unsigned int idx, listint_t *new_node, listint_t *temp)
 {
 unsigned int index = 0;
