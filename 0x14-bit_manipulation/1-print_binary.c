@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 	unsigned int i = 0;
 
 	c <<= 63;
-	
+
 	if (n == 0)
 		_putchar('0');
 
@@ -19,7 +19,7 @@ void print_binary(unsigned long int n)
 	{
 		if ((n & c) == 0 && i == 1)
 			_putchar('0');
-		
+
 		if ((n & c))
 		{
 			_putchar('1');
@@ -27,6 +27,6 @@ void print_binary(unsigned long int n)
 		}
 
 		c = c >> 1;
-		
+
 	}
 }
