@@ -24,7 +24,7 @@ if (text_content)
 while (text_content[i])
 i++;
 
-w = write(fd, text_content, i);	
+w = write(fd, text_content, i);
 }
 
 if (w == -1)
