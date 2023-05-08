@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * read_textfile - reads a text file and prints it to the POSIX
+ * create_file - creats file
  * @filename: file to read.
  * @text_content: content
  * Return: number of charachets
