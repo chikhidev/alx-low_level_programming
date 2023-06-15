@@ -15,7 +15,7 @@ unsigned int index = 0;
 
 new_node = (dlistint_t *)malloc(sizeof(dlistint_t));
 if (!new_node)
-return NULL;
+return (NULL);
 
 new_node->n = n;
 
@@ -26,7 +26,7 @@ new_node->prev = NULL;
 if (*h != NULL)
 (*h)->prev = new_node;
 *h = new_node;
-return *h;
+return (*h);
 }
 
 while (curr && index != idx - 1)
@@ -38,7 +38,7 @@ index++;
 if (curr == NULL)
 {
 free(new_node);
-return NULL;
+return (NULL);
 }
 
 next = curr->next;
@@ -48,6 +48,6 @@ new_node->next = next;
 if (next != NULL)
 next->prev = new_node;
 
-return *h;
+return (*h);
 }
 
