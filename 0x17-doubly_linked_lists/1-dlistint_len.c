@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
  * dlistint_len - function that returns elements in a linked list
  * @h: header pointer
  * Return: counter
