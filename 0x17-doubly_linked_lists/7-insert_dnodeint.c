@@ -1,5 +1,13 @@
 #include "lists.h"
 
+/**
+ * insert_dnodeint_at_index - function that adds node in an index
+ * @h: header pointer
+ * @idx: index to push the item at
+ * @n: number data
+ * Return: node at
+ */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *curr = *h, *new_node, *next;
