@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * delete_snodeint_at_index - delte node in idx
+ * delete_dnodeint_at_index - delte node in idx
  * @head: head p
  * @index: index
  * Return: 1 on sucess else -1
