@@ -1,20 +1,22 @@
 #include "main.h"
 /**
- * main - Print "Holberton" followed by a new line.
- * Description: You are not allowed to include standard libraries.
- * Return: 0
+ * _putchar - Writes a character to the standard output (stdout)
+ * @c: The character to be written
+ *
+ * Return: On success, returns the character written as an unsigned char
+ *         cast to an int. On error, returns -1 and sets errno appropriately.
  */
-int main(void)
+int _putchar(char c)
 {
-	char holberton[] = "_putchar";
-	int i = 0;
+	ssize_t num_written;
 
-	while (holberton[i] != '\0')
+	num_written = write(1, &c, 1);
+	if (num_written == -1)
 	{
-		_putchar(holberton[i]);
-		i++;
+		/* Error handling code */
+		return -1;
 	}
-	_putchar('\n');
 
-	return (0);
+	return (int)num_written;
 }
+
