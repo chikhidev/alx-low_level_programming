@@ -4,20 +4,18 @@
 * hash_table_delete - Deletes a hash table.
 * @ht: A pointer to the hash table to delete.
 *
-* Description: This function frees the memory allocated for a hash table,
-*              including all its nodes and arrays. It takes a pointer to the
-*              hash table `ht` as a parameter and performs the necessary memory
-*              deallocations.
+* Description: Frees the memory allocated for a hash table,
+*              including all its nodes and arrays.
 */
 void hash_table_delete(hash_table_t *ht)
 {
-if (ht == NULL)
-return;
-
+hash_table_t *head = ht;
 hash_node_t *node, *tmp;
-unsigned long int i = 0;
+unsigned long int i;
 
-while (i < ht->size)
+for (i = 0; i < ht->size; i++)
+{
+if (ht->array[i] != NULL)
 {
 node = ht->array[i];
 while (node != NULL)
@@ -28,10 +26,9 @@ free(node->value);
 free(node);
 node = tmp;
 }
-i++;
 }
-
-free(ht->array);
-free(ht);
+}
+free(head->array);
+free(head);
 }
 
