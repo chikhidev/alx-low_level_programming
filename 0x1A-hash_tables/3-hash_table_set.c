@@ -17,11 +17,9 @@ unsigned long int index, i;
 
 if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 return (0);
-
 value_copy = strdup(value);
 if (value_copy == NULL)
 return (0);
-
 index = key_index((const unsigned char *)key, ht->size);
 i = index;
 while (ht->array[i])
@@ -34,7 +32,6 @@ return (1);
 }
 i++;
 }
-
 new = malloc(sizeof(hash_node_t));
 if (new == NULL)
 {
@@ -50,7 +47,6 @@ return (0);
 new->value = value_copy;
 new->next = ht->array[index];
 ht->array[index] = new;
-
 return (1);
 }
 
